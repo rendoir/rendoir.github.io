@@ -10690,6 +10690,19 @@ header.masthead .readmore {
   background: #f4623a;
 }
 
+#contacts .social i {
+  font-size: 1.5rem;
+}
+
+#contacts .personal a {
+  color: black;
+  text-decoration: none;
+}
+
+#contacts .personal a:hover {
+  color: #f4623a;
+}
+
 #about p, #about h2 {
   color: white;
 }
