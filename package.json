@@ -27,6 +27,7 @@
     },
     "scripts": {
         "preinstall": "mkdir -p dist/",
+        "postinstall": "cp node_modules/jquery/dist/jquery.min.js dist && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js dist/ && cp node_modules/jquery.easing/jquery.easing.min.js dist/",
         "watch-js": "node_modules/.bin/watchify js/creative.js -o dist/bundle.js -v",
         "watch-css": "node_modules/.bin/node-sass -w scss/creative.scss dist/style.css",
         "watch": "yarn run watch-js & yarn run watch-css",
