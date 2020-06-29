@@ -25,23 +25,25 @@
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
     },
+    "scripts": {
+        "preinstall": "mkdir -p dist/",
+        "watch-js": "node_modules/.bin/watchify js/creative.js -o dist/bundle.js -v",
+        "watch-css": "node_modules/.bin/node-sass -w scss/creative.scss dist/style.css",
+        "watch": "yarn run watch-js & yarn run watch-css",
+        "build-js": "node_modules/.bin/browserify js/creative.js | node_modules/.bin/uglifyjs -mc > dist/bundle.js",
+        "build-css": "node_modules/.bin/node-sass scss/creative.scss dist/style.css --output-style compressed",
+        "build": "yarn run build-js | yarn run build-css"
+    },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.7.1",
-        "bootstrap": "4.2.1",
-        "jquery": "3.3.1",
+        "@fortawesome/fontawesome-free": "5.13.1",
+        "bootstrap": "4.5.0",
+        "jquery": "3.5.1",
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.3",
-        "del": "^3.0.0",
-        "gulp": "^4.0.0",
-        "gulp-autoprefixer": "6.0.0",
-        "gulp-clean-css": "4.0.0",
-        "gulp-header": "2.0.7",
-        "gulp-plumber": "^1.2.1",
-        "gulp-rename": "1.4.0",
-        "gulp-sass": "4.0.2",
-        "gulp-uglify": "3.0.1",
-        "merge-stream": "^1.0.1"
+        "browserify": "^16.5.1",
+        "node-sass": "^4.14.1",
+        "uglify-es": "^3.3.9",
+        "watchify": "^3.11.1"
     }
 }
