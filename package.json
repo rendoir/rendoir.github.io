@@ -26,7 +26,9 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
     },
     "scripts": {
-        "preinstall": "mkdir -p dist/",
+        "preinstall": "mkdir -p dist/ && mkdir -p dist/vendor/jquery.easing/ && mkdir -p dist/vendor/jquery/ && mkdir -p dist/vendor/bootstrap/ && mkdir -p dist/vendor/fontawesome-free/css/",
+        "postinstall": "yarn run vendor",
+        "vendor": "cp -R node_modules/@fortawesome/fontawesome-free/webfonts dist/vendor/fontawesome-free/ && cp node_modules/@fortawesome/fontawesome-free/css/all.min.css dist/vendor/fontawesome-free/css/ && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js dist/vendor/bootstrap/ && cp node_modules/jquery/dist/jquery.min.js dist/vendor/jquery/ && cp node_modules/jquery.easing/jquery.easing.min.js dist/vendor/jquery.easing/",
         "watch-js": "node_modules/.bin/watchify js/creative.js -o dist/bundle.js -v",
         "watch-css": "node_modules/.bin/node-sass -w scss/creative.scss dist/style.css",
         "watch": "yarn run watch-js & yarn run watch-css",
