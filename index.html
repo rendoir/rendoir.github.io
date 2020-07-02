@@ -24,6 +24,14 @@
 </head>
 
 <body id="page-top">
+  <!-- onTimelineImageLoad script -->
+  <script>
+    function onTimelineImageLoad(img) {
+      let ratio = img.naturalWidth / img.naturalHeight;
+      let width = 100.0 / Math.sqrt(1+1/(ratio*ratio));
+      img.style.width = width + "%";
+    }
+  </script>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -80,7 +88,7 @@
           <p class="mb-4">
               My name is Daniel Marques. I love video games, programming and fast cars. 
               <br><br>
-              I'm currently a student of the Integrated Masters in Informatics and Computing Engineering at the Faculty of Engineering of the University of Porto. I aspire to become a video game developer, contributing as a Gameplay or Graphics Programmer.
+              I have completed an Integrated Masters degree in Informatics and Computing Engineering at the Faculty of Engineering of the University of Porto. I currently work at Ubisoft Berlin as a Junior Gameplay Programmer.
               <br><br>
               My goal in life is to make games that are appreciated as a work of art. Games that are enjoyable, immersive, story rich and unforgettable.
               <br><br>
@@ -88,6 +96,32 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="container">
+      <ul class="timeline mt-5">
+          <li>
+              <div class="timeline-image"><img src="img/timeline/feup.svg" onload="onTimelineImageLoad(this)" /></div>
+              <div class="timeline-panel">
+                  <div class="timeline-heading">
+                      <h6>2015-2020</h4>
+                      <h5>Informatics and Computing Engineering</h4>
+                      <h5>Faculty of Engineering, University of Porto</h4>
+                  </div>
+                  <div class="timeline-body"><p>Throughout this bachelor and master’s degree, I’ve studied mathematics, computer architecture, algorithms and data structures, computer graphics, object-oriented programming, software engineering, artificial intelligence, parallel computing, game development, virtual and augmented reality and much more.</p></div>
+              </div>
+          </li>
+          <li class="timeline-inverted">
+              <div class="timeline-image"><img src="img/timeline/ubisoft.svg" onload="onTimelineImageLoad(this)" /></div>
+              <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h6>August 2020 - Present</h4>
+                    <h5>Junior Gameplay Programmer</h4>
+                    <h5>Ubisoft Berlin</h4>
+                  </div>
+                  <div class="timeline-body"><p></p></div>
+              </div>
+          </li>
+      </ul>
     </div>
   </section>
 
