@@ -1,30 +1,11 @@
 {
-    "title": "Creative",
-    "name": "startbootstrap-creative",
-    "version": "5.1.1",
-    "description": "Creative is a stylish one page HTML theme for Bootstrap.",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/creative",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-creative/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "title": "Daniel Marques website",
+    "name": "rendoir.github.io",
+    "version": "1.0.0",
+    "description": "This is my personal website.",
+    "homepage": "https://rendoir.github.io/",
     "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
-    },
+    "author": "Daniel Marques",
     "scripts": {
         "preinstall": "mkdir -p dist/ && mkdir -p dist/vendor/jquery.easing/ && mkdir -p dist/vendor/jquery/ && mkdir -p dist/vendor/bootstrap/ && mkdir -p dist/vendor/fontawesome-free/css/",
         "postinstall": "yarn run vendor",
