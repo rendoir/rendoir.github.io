@@ -25,7 +25,7 @@
     },
     "devDependencies": {
         "browserify": "^17.0.0",
-        "node-sass": "^5.0.0",
+        "node-sass": "^7.0.3",
         "uglify-es": "^3.3.9",
         "watchify": "^4.0.0"
     }

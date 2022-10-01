@@ -1,28 +1,23 @@
 // Styling for the portfolio section
 .projects-section {
   padding: 10rem 0;
+
   .project-text {
     padding: 3rem;
-    @media (min-width: 992px) {
-      hr {
-        border-color: $primary;
-        border-width: .25rem;
-        width: 30%;
-      }
-    }
   }
+
   .project-header {
     @include media-breakpoint-down(md) { 
       h4 {
         display: block !important;
       }
-    a {
-      float: none !important;
+      a {
+        float: none !important;
+      }
     }
-  }
 
     margin-bottom: 10px;
-    h4 {
+    h4, h3 {
       height: 1.5em;
       line-height: 1.5em;
       margin: 0;
@@ -71,6 +66,30 @@
     transform: translate(-50%, -50%);
   }
 
+  .project-image-wrap-big {
+    text-align: center;
+  }
+
+  .project-image-big {
+    max-width: 100%;
+    max-height: 70vh !important;
+    vertical-align: middle;
+  }
+
+  .project-text-big {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    h3 {
+      text-align: center;
+      display: inherit;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
   @include media-breakpoint-down(md) {
     .project-image-wrap {
       width: initial;
@@ -99,5 +118,40 @@
 
   a:hover {
     color: $primary;
+  }
+
+  hr {
+    border-color: $primary;
+    border-width: .25rem;
+    width: 30%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    hr#college-divider {
+      padding-bottom: 0 !important;
+    }
+
+    .project-text.text-lg-left {
+      padding-right: 0;
+
+      .project-header {
+        padding-right: 1.5rem;
+      }
+    }
+
+    .project-text.text-lg-right {
+      padding-left: 0;
+
+      .project-header {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .project-text {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
