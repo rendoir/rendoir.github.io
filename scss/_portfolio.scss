@@ -81,8 +81,12 @@
     padding-bottom: 3rem;
 
     h3 {
-      text-align: center;
-      display: inherit;
+      display: block;
+    }
+
+    a {
+      float: none;
+      display: inline-block;
     }
 
     p {
@@ -152,6 +156,13 @@
     .project-text {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) { 
+    .project-image-wrap, .project-image-wrap-big {
+      margin-right: -15px;
+      margin-left: -15px;
     }
   }
 }
