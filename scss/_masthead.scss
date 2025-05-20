@@ -3,10 +3,11 @@ header.masthead {
   height: 100vh;
   padding-top: 10rem;
   padding-bottom: calc(10rem - #{$navbar-height});
-  background-image: url('../img/farcry6.png');
-  background-color: hsla(25, 50%, 30%, 0.3);
+  background-image: url('../img/acshadows.jpg');
+  background-color: $bgtint;
+  background-position: 80%; // This is needed only because I want to focus more of the right side of the acshadows image on smaller screens instead of letting it focus the center
+  //background-position: center;
   background-blend-mode: multiply;
-  background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -50,6 +51,11 @@ header.masthead {
     transform: translate(-50%, -50%);
   }
   @include media-breakpoint-down(md) {
+    .readmore {
+      display: none;
+    }
+  }
+  @media (max-height: 400px) {
     .readmore {
       display: none;
     }

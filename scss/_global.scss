@@ -42,3 +42,7 @@ hr.light {
 footer {
   color: white !important;
 }
+
+::selection {
+  background: $selection;
+}
